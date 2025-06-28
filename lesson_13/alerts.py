@@ -29,6 +29,6 @@ time.sleep(3)
 print(alert.text)
 #alert.accept() принимаем алерт
 #alert.dismiss()  отклоняет алерт
-alert.send_keys("Holy Shit!!!")
+alert.send_keys("Holy Shit!!!") # отправляем текст в алерт
 alert.accept()
 time.sleep(3)
