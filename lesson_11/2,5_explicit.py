@@ -13,13 +13,13 @@ driver.get('https://the-internet.herokuapp.com/dynamic_controls')
 '''REMOVE_BUTTON = ("xpath", "//button[text()='Remove']")
 
 driver.find_element(*REMOVE_BUTTON).click()
-wait.until(EC.invisibility_of_element(REMOVE_BUTTON))
+wait.until(EC.invisibility_of_element(REMOVE_BUTTON)) #ждать пока объект не станет невидимым
 print("Всё ОК")'''
 
 ENABLE_BUTTON = ("xpath", "//button[text()='Enable']")
 TEXT_FIELD = ("xpath", "//input[@type='text']")
 
-wait.until(EC.element_to_be_clickable(ENABLE_BUTTON)).click()
+wait.until(EC.element_to_be_clickable(ENABLE_BUTTON)).click() #ждать пока элемент не станет кликабельным
 wait.until(EC.element_to_be_clickable(TEXT_FIELD)).send_keys('All is good')
-wait.until(EC.text_to_be_present_in_element_value(TEXT_FIELD, 'All is good'))
+wait.until(EC.text_to_be_present_in_element_value(TEXT_FIELD, 'All is good')) #ждать пока введеный текст не появится
 print("all right")
